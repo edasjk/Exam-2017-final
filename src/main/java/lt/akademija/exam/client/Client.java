@@ -79,29 +79,30 @@ public class Client {
         this.lastName = lastName;
     }
 
-
-
 	public String getBirthDate() {
 		return birthDate;
 	}
-
-
 
 	public void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
 
-
-
 	public String getPhone() {
 		return phone;
 	}
 
-
-
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-    
+
+	public List<Inventory> getInventory() {
+		return inventory;
+	}
+
+	public void setInventory(List<Inventory> inventory) {
+		this.inventory = inventory;
+	}
+	
+   
     
 }

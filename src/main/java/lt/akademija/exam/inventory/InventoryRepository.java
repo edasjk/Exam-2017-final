@@ -5,13 +5,15 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 import lt.akademija.exam.client.Client;
 
 public class InventoryRepository {
 
-    @PersistenceContext
+    //@PersistenceContext
+	@Autowired
     private EntityManager entityManager;
 
 
