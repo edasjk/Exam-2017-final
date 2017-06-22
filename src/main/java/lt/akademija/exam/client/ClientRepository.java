@@ -13,6 +13,7 @@ import java.util.List;
 @Repository
 public class ClientRepository {
 
+	//Autowired ?
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -34,6 +35,9 @@ public class ClientRepository {
 
     @Transactional(readOnly = true)
     public List<Client> findAll() {
-        return entityManager.createNamedQuery("findAllClients").getResultList();
+        //return entityManager.createNamedQuery("findAllClients").getResultList();
+        return entityManager.createQuery("SELECT c from Client c").getResultList();
     }
+    
+
 }
