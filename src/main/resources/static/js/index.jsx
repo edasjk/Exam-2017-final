@@ -7,12 +7,13 @@ var App = React.createClass({
                 <nav className="navbar navbar-inverse bg-inverse">
                     <a className="navbar-brand" href="#/">View Clients</a>
                     <a className="navbar-brand" href="#/createClient">Create Client</a>
+                    <a className="navbar-brand" href="#/createInventory">Create Inventory</a>
                 </nav>
 
                 <Router history={hashHistory}>
                     <Route path="/" component={ClientTableComponent} />
                     <Route path="/createClient" component={ClientCreationComponent} />
-
+                    <Route path="/createInventory" component={InventoryCreationComponent} />
                 </Router>
             </div>
         );

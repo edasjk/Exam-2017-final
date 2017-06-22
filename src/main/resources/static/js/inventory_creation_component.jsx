@@ -1,36 +1,31 @@
-var ClientCreationComponent = React.createClass({
+var InventoryCreationComponent = React.createClass({
 
     getInitialState: function() {
-        return {firstName: '', lastName: '', birthDate: '', phone: '', clientType: ''};
+        return {title: '', weight: '', sector: '', date: ''};
     },
 
-    handleFirstNameChange: function(event) {
-        this.setState({firstName: event.target.value})
+    handleTitleChange: function(event) {
+        this.setState({title: event.target.value})
     },
 
-    handleLastNameChange: function(event) {
-        this.setState({lastName: event.target.value})
+    handleWeightChange: function(event) {
+        this.setState({weight: event.target.value})
     },
     
-    handleBirthDateChange: function(event) {
-        this.setState({birthDate: event.target.value})
+    handleSectorChange: function(event) {
+        this.setState({sector: event.target.value})
     },
     
-    handlePhoneChange: function(event) {
-        this.setState({phone: event.target.value})
+    handleDateChange: function(event) {
+        this.setState({date: event.target.value})
     },
     
-    handleClientTypeChange: function(event) {
-        this.setState({clientType: event.target.value})
-    },
-
     registerClient: function() {
-        axios.post('http://localhost:8080/api/clients', {
-            firstName: this.state.firstName,
-            lastName: this.state.lastName,
-            birthDate: this.state.birthDate,
-            phone: this.state.phone,
-            clientType: this.state.clientType
+        axios.post('http://localhost:8080/api/inventory', {
+            title: this.state.title,
+            weight: this.state.weight,
+            sector: this.state.sector,
+            date: this.state.date
         }).then(result => window.location = "#/");
     },
 
@@ -41,27 +36,17 @@ var ClientCreationComponent = React.createClass({
                     <fieldset>
                         <legend>Register a client</legend>
                         <div className="form-group">
-                            <label htmlFor="firstName">First Name</label>
-                            <input className="form-control" id="firstName" name="firstName" value={this.props.firstName} onChange={this.handleFirstNameChange}/>
+                            <label htmlFor="title">Inventory Title</label>
+                            <input className="form-control" id="title" name="title" value={this.props.title} onChange={this.handleTitleChange}/>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="lastName">Last Name</label>
-                            <input className="form-control" id="lastName" name="lastName" value={this.props.lastName} onChange={this.handleLastNameChange}/>
+                            <label htmlFor="weight">Last Name</label>
+                            <input className="form-control" id="weight" name="weight" value={this.props.weight} onChange={this.handleWeightChange}/>
                         </div>
                             <div className="form-group">
-                            <label htmlFor="birthDate">Birth date</label>
-                            <input className="form-control" id="birthDate" name="birthDate" value={this.props.birthDate} onChange={this.handleBirthDateChange}/>
+                            <label htmlFor="date">Inventory date</label>
+                            <input className="form-control" id="date" name="date" value={this.props.date} onChange={this.handleDateChange}/>
                         </div>                            
-                        <div className="form-group">
-                            <label htmlFor="phone">Phone</label>
-                            <input className="form-control" id="phone" name="phone" value={this.props.phone} onChange={this.handlePhoneChange}/>
-                        </div>
-                            
-                        <div className="form-group">
-                            <label htmlFor="clientType">Client Type</label>
-                            <input className="form-control" id="clientType" name="clientType" value={this.props.clientType} onChange={this.handleClientTypeChange}/>
-                        </div>                               
-                            
                         <div className="form-group">
                             <input className="btn btn-primary" id="registerBtn" type="button" value="Register" onClick={this.registerClient}/>
                         </div>
@@ -73,4 +58,4 @@ var ClientCreationComponent = React.createClass({
 
 });
 
-window.ClientCreationComponent = ClientCreationComponent;
+window.InventoryCreationComponent = InventoryCreationComponent;
