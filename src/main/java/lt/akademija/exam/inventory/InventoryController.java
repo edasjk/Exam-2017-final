@@ -37,10 +37,18 @@ public class InventoryController {
         return inventoryRepository.findAll();
     }
 
+    /*
+     * Deletes inventory
+     */
+    
     @DeleteMapping("/api/inventory/{id}")
     public void deleteInventory(@PathVariable Long id) {
         inventoryRepository.delete(id);
     }
+    
+    /*
+     * Register inventory
+     */
 
     @PostMapping("/api/inventory")
     public Inventory registerInventory(@RequestBody Inventory inventory) {
