@@ -39,7 +39,7 @@ var ClientCreationComponent = React.createClass({
             <div>
                 <form>
                     <fieldset>
-                        <legend>Register a client</legend>
+                        <legend><h1>Register a client</h1></legend>
                         <div className="form-group">
                             <label htmlFor="firstName">First Name</label>
                             <input className="form-control" id="firstName" name="firstName" value={this.props.firstName} onChange={this.handleFirstNameChange}/>

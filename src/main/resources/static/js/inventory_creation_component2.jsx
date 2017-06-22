@@ -20,7 +20,7 @@ var InventoryCreationComponent = React.createClass({
         this.setState({date: event.target.value})
     },
     
-    registerInventory: function() {
+    registerClient: function() {
         axios.post('http://localhost:8080/api/inventory', {
             title: this.state.title,
             weight: this.state.weight,
@@ -40,7 +40,7 @@ var InventoryCreationComponent = React.createClass({
                             <input className="form-control" id="title" name="title" value={this.props.title} onChange={this.handleTitleChange}/>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="weight">Weight</label>
+                            <label htmlFor="weight">Last Name</label>
                             <input className="form-control" id="weight" name="weight" value={this.props.weight} onChange={this.handleWeightChange}/>
                         </div>
                             <div className="form-group">

@@ -16,6 +16,8 @@ var ClientTableComponent = React.createClass({
 
     render: function () {
         return (
+            <div>
+            <h1>Client List</h1>
             <table className="table">
                 <thead>
                     <tr>
@@ -38,6 +40,7 @@ var ClientTableComponent = React.createClass({
                 )}
                 </tbody>
             </table>
+            </div>
         );
     }
 });

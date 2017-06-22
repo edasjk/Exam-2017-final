@@ -13,18 +13,24 @@ public class Inventory {
     @Id
     @GeneratedValue
     private Long id;
-
     private String title;
+	private double weight;
+
+    @Size(min = 1, max = 40)
+    private int sector;
     
-    
+    private String date;
 
     public Inventory() {
 		super();
 	}
     
-    
 
-	public Inventory(Long id, String title, String weight, byte sector, String date) {
+    /*
+     * Constructor with all fields
+     */
+
+	public Inventory(Long id, String title, double weight, int sector, String date) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -51,19 +57,19 @@ public class Inventory {
 		this.title = title;
 	}
 
-	public String getWeight() {
+	public double getWeight() {
 		return weight;
 	}
 
-	public void setWeight(String weight) {
+	public void setWeight(double weight) {
 		this.weight = weight;
 	}
 
-	public byte getSector() {
+	public int getSector() {
 		return sector;
 	}
 
-	public void setSector(byte sector) {
+	public void setSector(int sector) {
 		this.sector = sector;
 	}
 
@@ -75,11 +81,6 @@ public class Inventory {
 		this.date = date;
 	}
 
-	private String weight;
-    
-    @Size(min = 1, max = 40)
-    private byte sector;
-    
-    private String date;
+
 
 }

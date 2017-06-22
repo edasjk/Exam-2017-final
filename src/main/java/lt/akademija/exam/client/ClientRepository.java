@@ -11,6 +11,11 @@ import java.util.List;
 /**
  * @author ggrazevicius
  */
+
+/*
+ * Defines CRUD operations with client
+ */
+
 @Repository
 public class ClientRepository {
 

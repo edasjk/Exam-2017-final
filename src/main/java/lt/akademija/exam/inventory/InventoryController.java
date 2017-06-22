@@ -20,9 +20,16 @@ import lt.akademija.exam.client.ClientRepository;
 @RestController
 public class InventoryController {
 
+	/*
+	 * Defines URL's for CRUD operations
+	 */
+	
     @Autowired
     private InventoryRepository inventoryRepository;
     
+    /*
+     * Returns all inventory
+     */
 
     @GetMapping("/api/inventory")
     @ApiOperation(value = "Returns all inventory that are currently in the list")

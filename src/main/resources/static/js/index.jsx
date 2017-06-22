@@ -13,7 +13,7 @@ var App = React.createClass({
                 <Router history={hashHistory}>
                     <Route path="/" component={ClientTableComponent} />
                     <Route path="/createClient" component={ClientCreationComponent} />
-                    <Route path="/createInventory" component={InventoryCreationComponent} />
+
                 </Router>
             </div>
         );
