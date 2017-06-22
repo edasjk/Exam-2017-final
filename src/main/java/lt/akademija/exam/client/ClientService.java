@@ -23,66 +23,14 @@ public class ClientService {
 //    @Autowired
 //    private InventoryRepository inventoryRepository;
 
-	 
-    
-    
 
-//    @Transactional
-//    public Client getClient(Long id) {
-//        return ClientRepository.find(id);
-//    }
-
-/*    @Transactional
+    @Transactional
     public Client createClient(Client c) {
         return clientRepository.save(c);
-    }*/
+    }
 
-//    @Transactional
-//    public LibraryReader joinNewReader(Long libraryId, LibraryReader r) {
-//        LibraryReader savedReader = libraryReaderRepository.saveOrUpdate(r);
-//        Library library = libraryRepository.find(libraryId);
-//        library.getReaders().add(savedReader);
-//
-//        return savedReader;
-//    }
-    
-    /*
-     * Add new inventory
-     */
-    
-//    @Transactional
-//    public Inventory addInventory(Long clientId, Inventory i) {
-//        LibraryReader savedReader = libraryReaderRepository.saveOrUpdate(r);
-//        Library library = libraryRepository.find(libraryId);
-//        library.getReaders().add(savedReader);
-//
-//        return savedReader;
-//    }
-//
-//    @Transactional
-//    public Book enterNewBook(Long libraryId, Book b) {
-//        Book savedBook = bookRepository.saveOrUpdate(b);
-//        Library library = libraryRepository.find(libraryId);
-//        library.getBooks().add(savedBook);
-//        return savedBook;
-//    }
-//
-//    @Transactional
-//    public LibraryReader borrowBook(Long bookId, Long readerId) {
-//        LibraryReader reader = libraryReaderRepository.find(readerId);
-//        Book book = bookRepository.find(bookId);
-//        reader.addBorrowedBook(book);
-//        return reader;
-//    }
-//
-//	
-//	
-//	
-//	
-//	
-//
 //	/*
-//	 * Add some clients for testing
+//	 * Add some clients for testing (not good solution)
 //	 */
 //	
 //	static {
@@ -101,37 +49,13 @@ public class ClientService {
 //	 * Client list
 //	 * (add filter to show 5 clients with largest inventory weight) 
 //	 */
-//    public List<Client> getClients() {
-//        List<Client> listClient = new ArrayList<Client>();
-//        for (Client client : listClient) {
-//			listClient.add(client);
-//		}
-//        return listClient;
-//    }
-//    
-//    public Book getBook(Long id) {
-//    	for (Book book : books) {
-//			if (book.getId()==id) {
-//				return book;
-//			}
-//		}
-//    	return null;
-//    }
-//		
-//
-////    public void addBook(String title, String author) {
-////        books.add(new Book(++id, title, author));
-////    }
-//
-//    public void deleteBook(Long id) {
-//        Iterator<Book> iterator = books.iterator();
-//        while (iterator.hasNext()) {
-//            Book book = iterator.next();
-//            if (book.getId() == id) {
-//                iterator.remove();
-//            }
-//        }    	
-//    }
+    public List<Client> getClients() {
+        List<Client> listClient = new ArrayList<Client>();
+        for (Client client : listClient) {
+			listClient.add(client);
+		}
+        return listClient;
+    }
 	
 	
 }

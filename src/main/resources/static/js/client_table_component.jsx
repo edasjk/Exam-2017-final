@@ -23,7 +23,6 @@ var ClientTableComponent = React.createClass({
                         <th>Last Name</th>
                         <th>Birth date</th>
                         <th>Phone</th>
-                        <th>First Name</th>
                         <th>Client type</th>
                     </tr>
                 </thead>
@@ -32,10 +31,9 @@ var ClientTableComponent = React.createClass({
                     <tr key={client.id}>
                         <td>{client.firstName}</td>
                         <td>{client.lastName}</td>
-                        <td>{client.firstName}</td>
                         <td>{client.birthDate}</td>
                         <td>{client.phone}</td>
-                        <td></td>                        
+                        <td>{client.clientType}</td>                        
                     </tr>
                 )}
                 </tbody>

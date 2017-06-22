@@ -26,11 +26,17 @@ public class Client {
     
     private String birthDate;
     private String phone;
-    private enum clientType {
-        COMMON, LOYAL 
-    } 
+    private String clientType; 
     
-    /*
+    public String getClientType() {
+		return clientType;
+	}
+
+	public void setClientType(String clientType) {
+		this.clientType = clientType;
+	}
+
+	/*
      * Relation with inventory
      */
     @OneToMany
@@ -39,20 +45,15 @@ public class Client {
     public Client() {
     }
 
-    public Client(Long id, String firstName, String lastName, String birthDate, String phone) {
+ 	public Client(Long id, String firstName, String lastName, String birthDate, String phone, String clientType) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.birthDate = birthDate;
 		this.phone = phone;
-	}
-    
-	public Client(Long id, String firstName, String lastName) {
-		super();
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.clientType = clientType;
+		this.inventory = inventory;
 	}
 
 	public Long getId() {
@@ -94,6 +95,7 @@ public class Client {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
 
 	public List<Inventory> getInventory() {
 		return inventory;

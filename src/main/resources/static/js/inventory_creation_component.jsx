@@ -1,7 +1,7 @@
 var ClientCreationComponent = React.createClass({
 
     getInitialState: function() {
-        return {firstName: '', lastName: '', birthDate: '', phone: ''};
+        return {firstName: '', lastName: '', birthDate: '', phone: '', clientType: ''};
     },
 
     handleFirstNameChange: function(event) {

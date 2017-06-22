@@ -12,6 +12,7 @@ var App = React.createClass({
                 <Router history={hashHistory}>
                     <Route path="/" component={ClientTableComponent} />
                     <Route path="/createClient" component={ClientCreationComponent} />
+
                 </Router>
             </div>
         );

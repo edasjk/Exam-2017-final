@@ -25,14 +25,6 @@ public class ClientController {
 
     
         {
-//            Flight telAviv = new Flight();
-//            telAviv.setId(idGenerator.incrementAndGet());
-//            telAviv.setDate("2017-03-20");
-//            telAviv.setTime("14:45");
-//            telAviv.setFlightNumber("BT 610");
-//            telAviv.setCompany("Air Baltic");
-//            telAviv.setStatus(Flight.Status.LANDED);
-//            flights.add(telAviv);
         	Client jonas = new Client();
             jonas.setId(idGenerator.incrementAndGet());
         	//jonas.setId(++id);
@@ -40,11 +32,9 @@ public class ClientController {
         	jonas.setLastName("Jonaitis");
         	jonas.setBirthDate("1990.01.01");
         	jonas.setPhone("8677 12345");
-        	
+        	//jonas.setStatus();
         	clients.add(jonas);
-        	
-        	
-        	
+       	
         }
     
     
